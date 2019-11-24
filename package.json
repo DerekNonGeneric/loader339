@@ -1,0 +1,22 @@
+{
+  "name": "lorem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules x.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "lorem": "./bin/lorem"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "keywords": [],
+  "exports": {
+    "shared/constants": "./src/node_modules/shared/constants.js"
+  },
+  "author": "",
+  "license": "0BSD"
+}
