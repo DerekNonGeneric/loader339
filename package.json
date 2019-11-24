@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "exports": {
-    "constants": "./src/node_modules/shared/constants.js"
+    "shared/constants": "./src/node_modules/shared/constants.js"
   },
   "author": "",
   "license": "0BSD"
