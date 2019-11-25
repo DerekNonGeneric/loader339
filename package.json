@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --experimental-modules x.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap --no-esm --node-arg=--experimental-modules test/*.mjs"
   },
   "bin": {
     "lorem": "./bin/lorem"
@@ -15,8 +15,12 @@
   },
   "keywords": [],
   "exports": {
-    "shared/constants": "./src/node_modules/shared/constants.js"
+    ".": "./lib/constants.mjs",
+    "./constants": "./lib/constants.mjs"
   },
   "author": "",
-  "license": "0BSD"
+  "license": "0BSD",
+  "devDependencies": {
+    "tap": "^14.10.1"
+  }
 }
