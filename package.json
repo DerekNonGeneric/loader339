@@ -21,6 +21,6 @@
   "author": "",
   "license": "0BSD",
   "devDependencies": {
-    "tap": "^14.10.1"
+    "tap": "14.10.1"
   }
 }
