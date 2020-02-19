@@ -11,7 +11,8 @@
     "lorem": "./bin/lorem"
   },
   "engines": {
-    "node": ">=13.7.0"
+    "node": ">=13.7.0",
+    "npm": ">=6.13.6"
   },
   "keywords": [],
   "exports": {
