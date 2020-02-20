@@ -1,7 +1,7 @@
 {
-  "name": "lorem",
+  "name": "loader339",
   "version": "1.0.0",
-  "description": "",
+  "description": "ES Module Loader Prototype — APM",
   "main": "index.js",
   "scripts": {
     "start": "node --experimental-modules x.mjs",
@@ -14,6 +14,10 @@
     "node": ">=13.7.0",
     "npm": ">=6.13.6"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerekNonGeneric/loader339.git"
+  },
   "keywords": [],
   "exports": {
     ".": "./lib/constants.mjs",
@@ -21,6 +25,10 @@
   },
   "author": "",
   "license": "0BSD",
+  "bugs": {
+    "url": "https://github.com/DerekNonGeneric/loader339/issues"
+  },
+  "homepage": "https://github.com/DerekNonGeneric/loader339#readme",
   "devDependencies": {
     "tap": "14.10.1"
   }
