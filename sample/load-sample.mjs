@@ -26,7 +26,7 @@ function tranSpawn(source) {
   // Replace a builtin module with custom module.
   return source.replace(
     /import { spawn } from 'child_process';/g,
-    'import spawn from \'cross-spawn\';'
+    "import spawn from 'cross-spawn';"
   );
 }
 

@@ -6,6 +6,8 @@
   "scripts": {
     "lint:js": "npx eslint --ext '.mjs' .",
     "format:js": "npx eslint --ext '.mjs' --fix .",
+    "lint:md": "npx prettier { ./**/*.md }",
+    "format:md": "npx prettier --write { ./**/*.md }",
     "test": "tap --no-esm --node-arg=--experimental-modules test/*.mjs",
     "start": "node --no-warnings --harmony-top-level-await --experimental-loader=./sample/load-sample.mjs ./sample/lib/alpha.mjs",
     "nonloader-start": "node --no-warnings --harmony-top-level-await ./sample/lib/alpha.mjs"
@@ -36,6 +38,9 @@
     "@typescript-eslint/eslint-plugin": "2.20.0",
     "@typescript-eslint/parser": "2.20.0",
     "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "prettier": "1.19.1",
     "semver": "7.1.3",
     "tap": "14.10.1"
   },

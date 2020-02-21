@@ -12,7 +12,7 @@ const NODE_VERSION = process.version.split('-')[0];
 tap.test((t) => {
   t.ok(
     semver.satisfies(NODE_VERSION, pjsonObj.engines.node),
-    `current \`node\`, ${NODE_VERSION}, must satisfy ${pjsonObj.engines.node}`,
+    `current \`node\`, ${NODE_VERSION}, must satisfy ${pjsonObj.engines.node}`
   );
   t.done();
 });
