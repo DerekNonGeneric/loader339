@@ -4,15 +4,16 @@
   "description": "ES Module Loader Prototype — APM",
   "main": "index.js",
   "scripts": {
-    "lint:js": "npx eslint --ext '.mjs' .",
-    "format:js": "npx eslint --ext '.mjs' --fix .",
+    "preinstall": "node tasks/check-package-dev-engines package.json",
+    "lint:js": "npx eslint --ext=.js,.mjs .",
+    "format:js": "npx eslint --ext=.js,.mjs --fix .",
     "start": "node --experimental-modules x.mjs",
     "test": "tap --no-esm --node-arg=--experimental-modules test/*.mjs"
   },
   "bin": {
     "lorem": "./bin/lorem"
   },
-  "engines": {
+  "devEngines": {
     "node": ">=13.7.0",
     "npm": ">=6.13.6"
   },
