@@ -21,5 +21,49 @@
     "plugins": [
         "@typescript-eslint",
         "prettier"
+    ],
+    "reportUnusedDisableDirectives": true,
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["./tasks/check-package-dev-engines.js", "./tasks/util.js"],
+            "parserOptions": {
+                "sourceType": "script",
+                "ecmaVersion": 3
+            },
+            "env": {
+                "node": true,
+                "es6": false
+            },
+            "rules": {
+                "comma-dangle": [
+                    2,
+                    {
+                        "arrays": "always-multiline",
+                        "objects": "always-multiline",
+                        "imports": "always-multiline",
+                        "exports": "always-multiline",
+                        "functions": "never"
+                    }
+                ],
+                "func-style": [2, "expression", { "allowArrowFunctions": false }],
+                "no-console": 0,
+                "no-process-exit": 0,
+                "no-var": 0
+            }
+        }
     ]
 }
