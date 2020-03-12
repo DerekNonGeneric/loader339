@@ -11,6 +11,34 @@ additional items that have been recognized as desirable, see the
 
 **Status per User Goal**
 
+△ [_monkey patch_](./atlas.md#monkey-patch) a module at import time  
+├── ○ user module code  
+└── × node builtin module code  
+
+○ patch a module w/o changing its URL in the
+[_module map_](./atlas.md#module-map)  
+
+△ keep track of imported modules  
+├── ○ format  
+├── × specifier  
+└── ○ URL  
+
+△ patch/wrap a module's exports  
+├── ○ wrap `export default ...` w/ IIFE  
+├── × wrap APIs and don't patch away exports  
+├── × wrap all of a module's exported functions  
+└── × wrap only a few of a module's exported functions  
+
+△ access a module's compiled source code  
+├── × user module code  
+└── × node builtin module code
+
+○ more than one active [APM](./atlas.md#apm)/transformer within a single app  
+
+× rewrite the URL of an import request before loader resolution  
+
+× safe hook application in an arbitrary sequence  
+
 <br /><hr />
 
 <table style="overflow: visible">
