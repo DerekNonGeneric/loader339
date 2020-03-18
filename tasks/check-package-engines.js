@@ -88,12 +88,12 @@ var checkVersion = (exports.checkVersion = function(toolCommand) {
 var processVersionCheckResults = function(result) {
   if (!result.supported) {
     console.error(
-      colors.red('× ' + result.command + '\tv' + semver.clean(result.version))
+      colors.red('× ' + result.command + '\t v' + semver.clean(result.version))
     );
     return 1;
   } else {
     console.error(
-      colors.green('🗸 ' + result.command + '\tv' + semver.clean(result.version))
+      colors.green('○ ' + result.command + '\t v' + semver.clean(result.version))
     );
     return 0;
   }
