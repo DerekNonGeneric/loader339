@@ -11,6 +11,16 @@ applications — strives to detect and diagnose complex application performance
 problems to maintain an expected level of service
 
 </dd>
+<dt id="import-maps">
+
+[import maps](https://wicg.github.io/import-maps)
+
+</dt>
+<dd>
+
+allow web pages to control the behavior of JavaScript imports
+
+</dd>
 <dt id="module-map">
 
 [module map](https://html.spec.whatwg.org/multipage/webappapis.html#module-map)
