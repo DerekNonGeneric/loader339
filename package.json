@@ -14,7 +14,7 @@
     "format:js": "npx prettier { ./**/*.mjs }",
     "test": "node --no-warnings ./test/test-node-version.mjs && node --no-warnings ./test/test-constants.mjs",
     "raid": "npm run raid:update && npm run raid:nuke && npm run raid:reconstruct",
-    "raid:update": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').yellow('WARN: the raid:update task is currently unavailable.\\n'))\"",
+    "raid:update": "npx npm-check-updates -u",
     "raid:nuke": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').green('INFO: Nuking node_modules!\\n'))\" && npx --ignore-existing --quiet rimraf package-lock.json node_modules && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').red('KABOOM!\\n'))\"",
     "raid:reconstruct": "npm --quiet install && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').green('INFO: Reconstruction complete!\\n'))\""
   },
@@ -42,17 +42,17 @@
   },
   "homepage": "https://github.com/DerekNonGeneric/loader339#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "2.23.0",
-    "@typescript-eslint/experimental-utils": "2.23.0",
-    "@typescript-eslint/parser": "2.23.0",
-    "eslint-config-prettier": "6.10.0",
-    "eslint-plugin-prettier": "3.1.2",
-    "prettier": "1.19.1",
+    "@typescript-eslint/eslint-plugin": "2.34.0",
+    "@typescript-eslint/experimental-utils": "2.34.0",
+    "@typescript-eslint/parser": "2.34.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.3",
+    "prettier": "2.0.5",
     "rimraf": "3.0.2",
-    "semver": "7.1.3"
+    "semver": "7.3.2"
   },
   "dependencies": {
     "cli-truncate": "2.1.0",
-    "cross-spawn": "7.0.1"
+    "cross-spawn": "7.0.2"
   }
 }
