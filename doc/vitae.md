@@ -1,5 +1,5 @@
 <table>
-  <thead><tr><td colspan=3 align=center><strong>This is a living document. It describes the policy and priorities as they exist today, but can evolve over time.</strong></td></tr></thead>
+  <thead><tr><td colspan=3 align=center><strong>This is a living document. It can evolve over time.</strong></td></tr></thead>
   <tfoot><tr><td align=center><a href="./roadmap.md"><strong>❮&nbsp;Roadmap</strong></a></td><td><img width=1000/></td><td align=center><a href="./wishlist.md"><strong>Wishlist&nbsp;❯</strong></a></td></tr></tfoot>
 </table><br /><hr /><br />
 
