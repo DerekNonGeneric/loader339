@@ -46,7 +46,7 @@
     "@typescript-eslint/experimental-utils": "5.30.6",
     "@typescript-eslint/parser": "2.34.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "4.2.1",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "semver": "7.3.7"
