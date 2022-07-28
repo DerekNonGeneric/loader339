@@ -27,7 +27,7 @@
     "format:md": "npm run lint:md -- --write",
     "preinstall": "node tasks/check-package-engines package.json",
     "lint:js": "npx eslint --ext=.js,.mjs .",
-    "lint:md": "npx prettier { ./**/*.md }",
+    "lint:md": "eslint --ext=md .",
     "nonloader-start": "node --no-warnings --harmony-top-level-await ./sample/lib/alpha.mjs",
     "raid": "npx npm-run-all --sequential raid:update raid:nuke raid:reconstruct",
     "raid:nuke": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').green('INFO: Nuking node_modules!\\\n'))\" && npx --ignore-existing --quiet rimraf package-lock.json node_modules && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').red('KABOOM!\\\n'))\"",
