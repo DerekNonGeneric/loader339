@@ -110,12 +110,12 @@ function isLintFreePjson(pjsonPath) {
   //* 03. Output result.
   // The package has a beautiful reporter in CLI, but it's missing from lib API.
   // To avoid shelling out, the following unconventional means were necessary.
-  const npmPjsonLintLoc = pathDirname(require.resolve('npm-package-json-lint'));
-  const npmPjsonLintReporterLoc = pathResolve(npmPjsonLintLoc, './Reporter');
-  const npmPjsonLintReporter = require(npmPjsonLintReporterLoc);
+  // const npmPjsonLintLoc = pathDirname(require.resolve('npm-package-json-lint'));
+  // const npmPjsonLintReporterLoc = pathResolve(npmPjsonLintLoc, './Reporter');
+  // const npmPjsonLintReporter = require(npmPjsonLintReporterLoc);
 
-  log.debug(`Reporter.write starting`);
-  npmPjsonLintReporter.write(response, npmPackageJsonLintOptions.quiet);
+  // log.debug(`Reporter.write starting`);
+  // npmPjsonLintReporter.write(response, npmPackageJsonLintOptions.quiet);
 
   //* 04. Determine and return result.
   let problemCount = 0;
