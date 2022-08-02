@@ -8,6 +8,6 @@ export default {
   rules: {
     'prefer-property-order': ['error', pjsonKeyOrder],
     'scripts-type': 'error',
-    'valid-values-license': ['error', ['0BSD']],
+    'valid-values-license': ['error', ['MIT']],
   },
 };
