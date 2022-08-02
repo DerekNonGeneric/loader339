@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/DerekNonGeneric/loader339/issues"
   },
-  "license": "0BSD",
+  "license": "MIT",
   "author": "",
   "main": "index.js",
   "exports": {
