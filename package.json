@@ -2,57 +2,72 @@
   "name": "loader339",
   "version": "1.0.0",
   "description": "ES Module Loader Prototype — APM",
+  "keywords": [],
+  "homepage": "https://github.com/DerekNonGeneric/loader339#readme",
+  "bugs": {
+    "url": "https://github.com/DerekNonGeneric/loader339/issues"
+  },
+  "license": "MIT",
+  "author": "The OpenINF Authors",
   "main": "index.js",
-  "scripts": {
-    "lint:md": "npx prettier { ./**/*.md }",
-    "format:md": "npx prettier --write { ./**/*.md }",
-    "start": "node --no-warnings --harmony-top-level-await --experimental-loader=./sample/load-sample.mjs ./sample/lib/alpha.mjs",
-    "nonloader-start": "node --no-warnings --harmony-top-level-await ./sample/lib/alpha.mjs",
-    "preinstall": "node tasks/check-package-engines package.json",
-    "lint:js": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').yellow('WARN: the lint:js task is currently unavailable.\\n'))\"",
-    "check:js": "node --check ./test/test-constants.mjs",
-    "format:js": "npx prettier { ./**/*.mjs }",
-    "test": "node --no-warnings ./test/test-node-version.mjs && node --no-warnings ./test/test-constants.mjs",
-    "raid": "npm run raid:update && npm run raid:nuke && npm run raid:reconstruct",
-    "raid:update": "npx npm-check-updates -u",
-    "raid:nuke": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').green('INFO: Nuking node_modules!\\n'))\" && npx --ignore-existing --quiet rimraf package-lock.json node_modules && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').red('KABOOM!\\n'))\"",
-    "raid:reconstruct": "npm --quiet install && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('ansicolors').green('INFO: Reconstruction complete!\\n'))\""
+  "exports": {
+    ".": "./lib/constants.mjs",
+    "./config": "./config/index.mjs",
+    "./constants": "./lib/constants.mjs"
   },
   "bin": {
     "lorem": "./bin/lorem"
-  },
-  "engines": {
-    "node": ">=13.7.0",
-    "npm": ">=6.13.6",
-    "npx": ">=6.13.6"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DerekNonGeneric/loader339.git"
   },
-  "keywords": [],
-  "exports": {
-    ".": "./lib/constants.mjs",
-    "./constants": "./lib/constants.mjs"
-  },
-  "author": "",
-  "license": "0BSD",
-  "bugs": {
-    "url": "https://github.com/DerekNonGeneric/loader339/issues"
-  },
-  "homepage": "https://github.com/DerekNonGeneric/loader339#readme",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "2.34.0",
-    "@typescript-eslint/experimental-utils": "5.32.0",
-    "@typescript-eslint/parser": "2.34.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "prettier": "2.7.1",
-    "rimraf": "3.0.2",
-    "semver": "7.3.7"
+  "scripts": {
+    "format:js": "npm run lint:js -- --fix",
+    "format:md": "npm run lint:md -- --write",
+    "preinstall": "node tasks/check-package-engines package.json",
+    "lint:js": "npx eslint --ext=.js,.mjs .",
+    "lint:md": "eslint --ext=md .",
+    "nonloader-start": "node --no-warnings --harmony-top-level-await ./sample/lib/alpha.mjs",
+    "raid": "npx npm-run-all --sequential raid:update raid:nuke raid:reconstruct",
+    "raid:nuke": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('chalk').green('INFO: Nuking node_modules!\\\n'))\" && npx --ignore-existing --quiet rimraf package-lock.json node_modules && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('chalk').red('KABOOM!\\\n'))\"",
+    "raid:reconstruct": "npm --quiet install && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('chalk').green('INFO: Reconstruction complete!\\\n'))\"",
+    "raid:update": "npx npm-check-updates -u",
+    "start": "node --no-warnings --harmony-top-level-await --experimental-loader=./sample/load-sample.mjs ./sample/lib/alpha.mjs",
+    "test": "npx tap --reporter=spec --no-ts --no-jsx --no-esm --no-cov --node-arg=--no-warnings --node-arg=--experimental-modules test/*.mjs",
+    "verify:pjson": "node tasks/verify-manifests.mjs"
   },
   "dependencies": {
     "cli-truncate": "3.1.0",
     "cross-spawn": "7.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.32.0",
+    "@typescript-eslint/experimental-utils": "5.32.0",
+    "@typescript-eslint/parser": "5.32.0",
+    "@wordpress/npm-package-json-lint-config": "4.1.2",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "minimist": "1.2.6",
+    "npm-check-updates": "16.0.5",
+    "npm-package-json-lint": "6.3.0",
+    "npm-package-json-lint-config-default": "5.0.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "*",
+    "prettier-package-json": "2.6.4",
+    "read-package-json": "5.0.1",
+    "rimraf": "3.0.2",
+    "semver": "7.3.7",
+    "typescript": "*"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   }
 }
