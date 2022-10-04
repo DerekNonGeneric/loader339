@@ -44,7 +44,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.36.2",
     "@typescript-eslint/experimental-utils": "5.36.2",
-    "@typescript-eslint/parser": "5.36.2",
+    "@typescript-eslint/parser": "5.39.0",
     "@wordpress/npm-package-json-lint-config": "4.2.0",
     "eslint": "*",
     "eslint-config-prettier": "*",
