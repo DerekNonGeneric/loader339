@@ -58,7 +58,7 @@
     "prettier-package-json": "2.6.4",
     "read-package-json": "5.0.2",
     "rimraf": "3.0.2",
-    "semver": "7.3.7",
+    "semver": "7.3.8",
     "typescript": "*"
   },
   "peerDependencies": {
