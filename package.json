@@ -45,7 +45,7 @@
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/experimental-utils": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
-    "@wordpress/npm-package-json-lint-config": "4.4.0",
+    "@wordpress/npm-package-json-lint-config": "4.5.0",
     "eslint": "8.25.0",
     "eslint-config-prettier": "*",
     "eslint-plugin-prettier": "*",
