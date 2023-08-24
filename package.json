@@ -29,10 +29,6 @@
     "lint:js": "npx eslint --ext=.js,.mjs .",
     "lint:md": "eslint --ext=md .",
     "nonloader-start": "node --no-warnings --harmony-top-level-await ./sample/lib/alpha.mjs",
-    "raid": "npx npm-run-all --sequential raid:update raid:nuke raid:reconstruct",
-    "raid:nuke": "node -e \"console.log(require('./tasks/util.js').rootNpmRequire('chalk').green('INFO: Nuking node_modules!\\\n'))\" && npx --ignore-existing --quiet rimraf package-lock.json node_modules && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('chalk').red('KABOOM!\\\n'))\"",
-    "raid:reconstruct": "npm --quiet install && node -e \"console.log(require('./tasks/util.js').rootNpmRequire('chalk').green('INFO: Reconstruction complete!\\\n'))\"",
-    "raid:update": "npx npm-check-updates -u",
     "start": "node --no-warnings --harmony-top-level-await --experimental-loader=./sample/load-sample.mjs ./sample/lib/alpha.mjs",
     "test": "npx tap --reporter=spec --no-ts --no-jsx --no-esm --no-cov --node-arg=--no-warnings --node-arg=--experimental-modules test/*.mjs",
     "verify:pjson": "node tasks/verify-manifests.mjs"
