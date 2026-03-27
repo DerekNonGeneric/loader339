@@ -44,7 +44,7 @@
     "@wordpress/npm-package-json-lint-config": "4.8.0",
     "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-prettier": "4.2.5",
     "minimist": "1.2.7",
     "npm-check-updates": "16.6.2",
     "npm-package-json-lint": "6.4.0",
